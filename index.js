@@ -17,7 +17,9 @@ var commentRoutes   = require('./routes/comments'),
 
 
 // seedDB();
-mongoose.connect('mongodb://localhost:27017/yelp_camp', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/yelp_camp', {useNewUrlParser: true});
+mongoose.connect('mongodb://general:general1@ds157544.mlab.com:57544/yelpcampem', {useNewUrlParser: true});
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
